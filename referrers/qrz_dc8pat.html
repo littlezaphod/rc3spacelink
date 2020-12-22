@@ -1,0 +1,185 @@
+<h2><strong><a id="QO100" name="QO100">The DC8PAT QO-100 Station</a></strong></h2>
+
+<p>In this section I will detail the DC8PAT QO100 station which I am operating since Sept 2019.&nbsp;</p>
+
+<p>Find below two talks I held about QO100 during the HAM Radio 2020 (in German, auf Deutsch) and during the Virtual Maker Faire 2020 (in English). It gives a complete overview of station design and build up + background on AMSAT-DL / QO100 + I am doing some live QSOs .</p>
+
+<p><iframe allowfullscreen="" frameborder="0" height="240" src="//www.youtube.com/embed/QwYeneFs918" width="430"></iframe>&nbsp; &nbsp;&nbsp;<strong><iframe allowfullscreen="" frameborder="0" height="240" src="//www.youtube.com/embed/ladDusLFNXM" width="430"></iframe></strong></p>
+
+<p>The following paragaphs outline my specific station design</p>
+
+<p><strong>Requirements:</strong></p>
+
+<p>* Portable design -&gt; shall be quickly deployable on my balcony or in the field<br />
+* Proven concept -&gt; shall be derived from existing concepts, want to be become QRV quickly, experiments come later<br />
+* Simple setup -&gt; single dish</p>
+
+<p><strong>Design:</strong></p>
+
+<p>* All QO-100 relevant elements mounted in ruggedized box<br />
+* LNB frequency compensation via SDR console<br />
+* Passive thermal management<br />
+* 230VAC or 12-24VDC supply<br />
+&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><img src="https://s3.amazonaws.com/files.qrz.com/t/dc8pat/QO_100_Setup_V2_0_New_PA.jpg" style="height:621px; width:805px" /></p>
+
+<p>Pluto housing + external OSC input</p>
+
+<p>I am feeding an external 10MHz signal to the Pluto. This is the lower end of the accepted frequency range. It requires to replace the on board 18pF coupling capacitor. As C123 is tiny I simply bridged it and added 2x47pF in series. This will then pass enough signal to achieve the specified 1.3Vpp to the tranceiver chip.</p>
+
+<p><img src="https://s3.amazonaws.com/files.qrz.com/t/dc8pat/PlutoSDR_OCXO_Mod.jpg" style="height:706px; width:658px" /></p>
+
+<p><img src="https://s3.amazonaws.com/files.qrz.com/t/dc8pat/IMG_4129.JPG" style="height:600px; width:800px" /></p>
+
+<p>&nbsp;</p>
+
+<p>RF section</p>
+
+<p><img src="https://s3.amazonaws.com/files.qrz.com/t/dc8pat/IMG_4132.JPG" style="height:1000px; width:750px" /></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<hr />
+<h2><a name="IceConeFeed"><strong>Ice Cone Feed (original DIY construction)</strong></a></h2>
+
+<p>I am running the QO100 uplink via a DIY dual feed also known as &quot;Ice Cone Feed&quot; featuring a 3.5 turn helix and a standard unmodified LNB (55mm diameter).</p>
+
+<p>If you have access to a 3D printer you can build it yourself. Or contact me via email and I can build a unit for you (see <a href="#ICFv2">Ice Cone Feed v2</a>).</p>
+
+<p><img src="https://s3.amazonaws.com/files.qrz.com/t/dc8pat/IceConeFeed_CutView.jpg" style="height:415px; width:586px" />&nbsp;<img src="https://s3.amazonaws.com/files.qrz.com/t/dc8pat/IceConeFeed_ExplosionView.JPG" style="height:413px; width:583px" /></p>
+
+<p><img src="https://s3.amazonaws.com/files.qrz.com/t/dc8pat/IMG_3709.JPG" style="height:244px; width:327px" />&nbsp;<img src="https://s3.amazonaws.com/files.qrz.com/t/dc8pat/IMG_3717.JPG" style="height:244px; width:326px" /></p>
+
+<p><img src="https://s3.amazonaws.com/files.qrz.com/t/dc8pat/IMG_3740.JPG" style="height:492px; width:657px" /></p>
+
+<p><strong>CONSTRUCTION: </strong>The Ice Cone Feed consists of 3D printable parts, which can be downloaded from thingiverse (links below).</p>
+
+<p>All part should be printed in <strong>PET/PETG</strong> as this is UV resistant and won&#39;t warp at outside temperatures as PLA would.&nbsp;</p>
+
+<p>The reflector support (below in red) will be pushed onto the LNB horn. It is designed for a standard 55mm horn diameter (59/61mm versions available as well).&nbsp;Print with 5-10% infill. It is secured by a clamping mechanism. An M4 bolt is inserted sideways and locks an M4 nut. Tighten the M4 bolt for clamping.</p>
+
+<p>The cover is a cone with 2mm wall thickness. Print with 100% infill. A rough qualitative test did not show significant attenuation at 2.4 GHz:<br />
+<a href="https://twitter.com/i/status/1185990040159170561">https://twitter.com/i/status/1185990040159170561</a></p>
+
+<p>The reflector is a 4mm aluminum disk, see drawing and hole pattern below&nbsp; Cut M4 threads for 3 bolts to secure the reflector to its support. Cut M3 threads for the N type connector. Make sure you meet the outer diameter, if the reflector is too large then the cover will get stuck when srewing it on. I don&#39;t have a lathe to produce perfect disks. I made my reflector by rougly cutting as per below drawing (a bit oversize). Then I used a special 3D printed tool (also on thingiverse) which you can mount the reflector on (M10 bolt) and spin it on a standard column drill. Use an angle grinder to shape the reflector circular. Works like a charme, demonstrated by this gentleman:&nbsp;<a href="https://twitter.com/i/status/1184072011787788288">https://twitter.com/i/status/1184072011787788288</a></p>
+
+<p>The helix consist of 10mm2 copper wire (although 16mm2 is probably better, let me know about your experiences). To help with winding a special winding tool can be printed as well. Just wind along the outer groove of the cylinder, 3.5 turns and you get a helix to spec with quite good tolerances.</p>
+
+<p>The antenna is fed by a standard N-type connector.</p>
+
+<p>Once the helix is finished use the helix support bracket and wind the helix into it. The bracket can be glued onto the reflector.</p>
+
+<p><strong>MATCHING:</strong> I have changed the matching strip to a vane style type. Cut a .5mm copper vane as per the dimensions below. Rotate the helix such that the end is 15mm away from the reflector.</p>
+
+<p><strong>TUNING</strong>: One way to tune the resonance to 2.4 GHz is to adjust the gap between vane and reflector at the connector side. For the Ice Cone Feed v2 the sweet spot is around 1 - 2mm. Other methods are adding copper tuning elements and chopping off bits until reaching resonance. Let me know about your experiences.&nbsp;</p>
+
+<p><img src="https://s3.amazonaws.com/files.qrz.com/t/dc8pat/IMG_6389_closeup.jpg" style="height:689px; width:700px" /></p>
+
+<p>&nbsp;&nbsp;<img src="https://s3.amazonaws.com/files.qrz.com/t/dc8pat/IMG_6387.JPG" style="height:1200px; width:900px" />&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>DISCLAIMER</strong>: This is an open source design for the HAM community. As such it is licensed under the&nbsp; <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" rel="license"> Creative Commons - Attribution - Non-Commercial - No Derivatives </a> license. You are welcome to rebuild it and use it for free for private HAM activity but you must not sell or monitarize it. Contact me for a commercial license.</p>
+
+<p><strong>DOWNLOADS</strong>: All STL files for 3D printing + pdfs and dxf for reflector hole pattern are packaged here: <a href="https://www.thingiverse.com/thing:3899461">https://www.thingiverse.com/thing:3899461</a></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><img src="https://s3.amazonaws.com/files.qrz.com/t/dc8pat/reflector.JPG" style="height:384px; width:596px" /></p>
+
+<p><img src="https://s3.amazonaws.com/files.qrz.com/t/dc8pat/matching_vane.PNG" style="height:518px; width:600px" />&nbsp;<img src="https://s3.amazonaws.com/files.qrz.com/t/dc8pat/matching_vane_dimensions.PNG" style="height:457px; width:600px" /></p>
+
+<p>&nbsp;</p>
+
+<p><img src="https://s3.amazonaws.com/files.qrz.com/t/dc8pat/helix_mold_multi_wire_dia.JPG" style="height:480px; width:600px" /></p>
+
+<p>Helix winder for different wire diameters</p>
+
+<p>&nbsp;</p>
+
+<p><img src="https://s3.amazonaws.com/files.qrz.com/t/dc8pat/lathe_tool.JPG" style="height:252px; width:328px" /></p>
+
+<p>Lathing tool</p>
+
+<p>&nbsp;</p>
+
+<hr />
+<h2><a id="ICFv2" name="ICFv2">Ice Cone Feed (V2)</a></h2>
+
+<p>This is an improved version for series production.<br />
+If you are not comfortable to build one yourself or do not have the right&nbsp;tools please contact me for a purchase.</p>
+
+<p>Please note: The Ice Cone Feed v2 comes fully assembled and tuned to 2.4GHz. It is plug and play for QO100 stations. Let me know your LNB type and diameter so that I can choose the right adapter.</p>
+
+<p>Click below for the datasheet:</p>
+
+<p><a href="https://qsl.net/d/do8pat//docs/IceConeFeed_ProductSheet_EN_DE_20201130.pdf"><img src="https://s3.amazonaws.com/files.qrz.com/t/dc8pat/flyer_PNG.jpg" style="height:668px; width:950px" /></a></p>
+
+<p>&nbsp;</p>
+
+<h3>Ice Cone Feed Gallery, send me pics from your station, PSE!</h3>
+
+<p><iframe allowfullscreen="" frameborder="0" height="360" src="//www.youtube.com/embed/Y-bHg4KoTJs" width="640"></iframe>&nbsp;<iframe allowfullscreen="" frameborder="0" height="360" scrolling="no" src="//www.youtube.com/embed/Jzrr_zuW8-I?rel=0&amp;autoplay=1" width="640"></iframe></p>
+
+<p><iframe allowfullscreen="" frameborder="0" height="360" src="//www.youtube.com/embed/PIKihMPATdQ?rel=0&amp;autoplay=1" width="640"></iframe></p>
+
+<p>&nbsp;</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="border-style:none; width:500px">
+	<tbody>
+		<tr>
+			<td><img src="https://s3.amazonaws.com/files.qrz.com/t/dc8pat/20201119_122241.jpg" style="height:225px; width:300px" /></td>
+			<td><img src="https://s3.amazonaws.com/files.qrz.com/t/dc8pat/2E972DCE10EE4D1282F8A02614AC511A.jpg" style="height:225px; width:300px" /></td>
+			<td><img src="https://s3.amazonaws.com/files.qrz.com/t/dc8pat/4EB43295C8484A47BB0187E25C23DADE.jpg" style="height:225px; width:300px" /></td>
+			<td><img src="https://s3.amazonaws.com/files.qrz.com/t/dc8pat/DSC_0146.JPG" style="height:169px; width:300px" /></td>
+		</tr>
+		<tr>
+			<td><img src="https://s3.amazonaws.com/files.qrz.com/t/dc8pat/DSCN0690.JPG" style="height:225px; width:300px" /></td>
+			<td><img src="https://s3.amazonaws.com/files.qrz.com/t/dc8pat/DSCN0694.JPG" style="height:225px; width:300px" /></td>
+			<td><img src="https://s3.amazonaws.com/files.qrz.com/t/dc8pat/IceCone2.JPG" style="height:201px; width:300px" /></td>
+			<td><img src="https://s3.amazonaws.com/files.qrz.com/t/dc8pat/IMG_20200615_205001.jpg" style="height:225px; width:300px" /></td>
+		</tr>
+		<tr>
+			<td><img src="https://s3.amazonaws.com/files.qrz.com/t/dc8pat/IMG_20200615_205009.jpg" style="height:225px; width:300px" /></td>
+			<td><img src="https://s3.amazonaws.com/files.qrz.com/t/dc8pat/IMG_20201114_142708.jpg" style="height:225px; width:169px" /></td>
+			<td><img src="https://s3.amazonaws.com/files.qrz.com/t/dc8pat/IMG_20201118_230103.jpg" style="height:225px; width:300px" /></td>
+			<td><img src="https://s3.amazonaws.com/files.qrz.com/t/dc8pat/IMG_20201119_220740.jpg" style="height:225px; width:300px" /></td>
+		</tr>
+		<tr>
+			<td><img src="https://s3.amazonaws.com/files.qrz.com/t/dc8pat/IMG_20201119_221330.jpg" style="height:225px; width:300px" /></td>
+			<td><img src="https://s3.amazonaws.com/files.qrz.com/t/dc8pat/IMG_3717.JPG" style="height:225px; width:300px" /></td>
+			<td><img src="https://s3.amazonaws.com/files.qrz.com/t/dc8pat/IMG_3740.JPG" style="height:225px; width:300px" /></td>
+			<td><img src="https://s3.amazonaws.com/files.qrz.com/t/dc8pat/IMG_3578k.jpg" style="height:225px; width:300px" /></td>
+		</tr>
+		<tr>
+			<td><img src="https://s3.amazonaws.com/files.qrz.com/t/dc8pat/IMG_3579k.jpg" style="height:225px; width:300px" /></td>
+			<td><img src="https://s3.amazonaws.com/files.qrz.com/t/dc8pat/IMG_5676.jpg" style="height:320px; width:240px" /></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<hr />
+<h2><a id="PatchFeed" name="PatchFeed">3D Patch Feed</a></h2>
+
+<p>A new design I am working on is a 3D printable patch antenna in a similar configuration as the famous POTY antenna. The design is mostly 3D printed, the radiator and reflector consist of copper and aluminum foil. The wave guide is a standard copper pipe.</p>
+
+<p>Many design elements are taken over from the Ice Cone Feed such as the thread on radom. The patch itself should be robust against mechanical detuning as it is a rigid printed block.</p>
+
+<p>Work in progress...</p>
+
+<p><img src="https://s3.amazonaws.com/files.qrz.com/t/dc8pat/render2_with_lnb.JPG" style="height:927px; width:1200px" /></p>
+
+<h2>&nbsp;</h2>
+
+<hr />
