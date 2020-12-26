@@ -86,7 +86,7 @@
                 {
                  "name":"exitUrl",
                  "type":"string",
-                 "value":"<lobby>\/hardware-making.json#start_rc3spacelink"
+                 "value":"{<lobby>\/hardware-making.json#start_rc3spacelink}"
                 }],
          "type":"tilelayer",
          "visible":true,

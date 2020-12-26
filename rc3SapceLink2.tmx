@@ -773,7 +773,7 @@
  </layer>
  <layer id="21" name="exit" width="35" height="28">
   <properties>
-   <property name="exitUrl" value="&lt;lobby&gt;/hardware-making.json#start_rc3spacelink"/>
+   <property name="exitUrl" value="{&lt;lobby&gt;/hardware-making.json#start_rc3spacelink}"/>
   </properties>
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
