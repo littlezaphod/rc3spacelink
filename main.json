@@ -102,9 +102,9 @@
          "opacity":1,
          "properties":[
                 {
-                 "name":"openWebsite",
+                 "name":"jitsiRoom",
                  "type":"string",
-                 "value":"https:\/\/dc8pat.darc.de\/rc3\/referrers\/livestream_referrer.html"
+                 "value":"q_and_a"
                 }],
          "type":"tilelayer",
          "visible":true,
